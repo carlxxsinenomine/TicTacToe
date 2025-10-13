@@ -1,6 +1,6 @@
 # tic_tac_toe
 
-A tic-tac-toe mobile game, to implement all the things that i've learned so far.
+A simple TIc Tac Toe Game, developed using Dart's Flutter framework. 'Tis to implement everything I've learned about this language.
 
 ## Getting Started
 
