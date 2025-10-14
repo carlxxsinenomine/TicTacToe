@@ -12,7 +12,7 @@ class TicTacToe extends StatelessWidget {
       title: 'TicTacToe',
       theme: ThemeData.dark().copyWith(
         useMaterial3: false, // dunno but without this, my custom style won't take effect
-        scaffoldBackgroundColor: Color(0xFF132440), //  Change the bg color of the Scaffold
+        scaffoldBackgroundColor: Color(0xFFFCF9EA), //  Change the bg color of the Scaffold
         colorScheme: ColorScheme.light(
           primary: Color(0xFF0A0E21),
         ),
@@ -28,24 +28,33 @@ class TicTacToe extends StatelessWidget {
               'Tic-Tac-Toe',
               textAlign: TextAlign.center,
               style: TextStyle(
+                color: Color(0xFF6FA4AF),
+                fontWeight: FontWeight.bold,
                 fontFamily: "Courgette",
                 fontSize: 50,
               ),
             ),
-
+            // Spacing between the main Title and the Buttons
+            SizedBox(
+              height: 100,
+            ),
             // center the button cause when crossAxis is stretched
             // the width of the button is also stretched
             // so centering makes the MainScreenButton relative to the Center widget
             Center(
-              child: MainScreenButton(
+              child: MainButton(
                 titleLabel: 'Play with AI',
                 width: 200,
                 onPressed: () {
                 },
               ),
             ),
+            // Spacing between the two Buttons
+            SizedBox(
+              height: 10,
+            ),
             Center(
-              child: MainScreenButton(
+              child: MainButton(
                 titleLabel: 'Play with a friend',
                 width: 200,
                 onPressed: () {
@@ -59,12 +68,12 @@ class TicTacToe extends StatelessWidget {
   }
 }
 
-class MainScreenButton extends StatelessWidget {
+class MainButton extends StatelessWidget {
   final String titleLabel;
   final VoidCallback? onPressed;
   final double width;
 
-  const MainScreenButton({
+  const MainButton({
     required this.titleLabel,
     this.onPressed,
     this.width = 150,
@@ -75,14 +84,21 @@ class MainScreenButton extends StatelessWidget {
     return RawMaterialButton(
       onPressed: onPressed,
       elevation: 0,
-      fillColor: Color(0xFF16476A),
+      fillColor: Color(0xFFD97D55),
       constraints: BoxConstraints.tightFor(width: width, height: 56),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(28),
+        side: BorderSide(
+          width: 2,
+          style: BorderStyle.solid,
+        )
       ),
       child: Text(
         titleLabel,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+            color: Colors.white
+        ),
       ),
     );
   }
