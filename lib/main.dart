@@ -1,7 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/main_page.dart';
+import 'package:tic_tac_toe/screens/game_page.dart';
+import 'package:tic_tac_toe/screens/main_page.dart';
 
 void main() => runApp(TicTacToe());
 
@@ -18,7 +17,11 @@ class TicTacToe extends StatelessWidget {
           primary: Color(0xFF0A0E21),
         ),
       ),
-      home: MainPage()
+      initialRoute: '/',
+      routes: {
+        '/': (MainPageContext) => MainPage(),
+        '/game_page': (GamePageContext) => GamePage(),
+      },
     );
   }
 }
