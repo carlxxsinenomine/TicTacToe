@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/components/tile.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage({super.key});
@@ -18,16 +19,85 @@ class _GamePageState extends State<GamePage> {
             children: <Widget>[
               // Players Row
               Row(
-
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text("Player 1: "),
+                  Text("Player 2: "),
+                ],
               ),
 
               // Tiles Column
               Column(
-                // 3x3
                 children: <Widget>[
-                  Row(),
-                  Row(),
-                  Row(),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 1,
+                        child: Tile(
+                          onPress: () {
+
+                          },
+                        ),
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+
+                          )
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 1,
+                        child: Tile(
+                          onPress: () {
+
+                          },
+                        ),
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+
+                          )
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 1,
+                        child: Tile(
+                          onPress: () {
+
+                          },
+                        ),
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Tile(
+
+                          )
+                      )
+                    ],
+                  )
                 ],
               )
             ],

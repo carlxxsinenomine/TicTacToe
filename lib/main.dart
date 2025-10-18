@@ -12,7 +12,7 @@ class TicTacToe extends StatelessWidget {
       title: 'TicTacToe',
       theme: ThemeData.dark().copyWith(
         useMaterial3: false, // dunno but without this, my custom style won't take effect
-        scaffoldBackgroundColor: Color(0xFFFCF9EA), //  Change the bg color of the Scaffold
+        scaffoldBackgroundColor: Color(0xFFFFF085), //  Change the bg color of the Scaffold
         colorScheme: ColorScheme.light(
           primary: Color(0xFF0A0E21),
         ),
